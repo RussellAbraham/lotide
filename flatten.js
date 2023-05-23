@@ -70,3 +70,20 @@ const flattenRecursive = function(array) {
 const nestedArray = [1, [2, [3, 4], 5], 6, [7, 8]];
 const flattenedArray = flattenRecursive(nestedArray);
 assertEqual(eqArrays(flattenedArray, [1, 2, 3, 4, 5, 6, 7, 8]), true);
+
+
+const flattenReduce = function(array) {
+  return array.reduce(function(result, item) {
+    if (Array.isArray(item)) {
+      const nestedArray = flattenReduce(item);
+      return result.concat(nestedArray);
+    } else {
+      return result.concat(item);
+    }
+  }, []);
+};
+
+const nestedArray1 = [1, [2, [3, 4], 5], 6, [7, 8]];
+const flattenedArray1 = flattenReduce(nestedArray1);
+console.log(flattenedArray1);  // [1, 2, 3, 4, 5, 6, 7, 8]
+
