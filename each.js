@@ -13,18 +13,21 @@ const each = function (obj, iterator, context) {
     }
   } else if (typeof obj === 'object') {
     // Handle generic objects
+    // Minimize property lookups within the loop
     const hasOwnProperty = Object.prototype.hasOwnProperty;
-
+    // loop iterates over the keys of the object, calling the iterator function with the current value, key, and the object
     for (let key in obj) {
       // Check if the property belongs to the object itself (not inherited)
       if (hasOwnProperty.call(obj, key)) {
         // Call the iterator function with the current value, key, and the object
+        // with the specified `context` as the `this` value
         if (iterator.call(context, obj[key], key, obj) === breaker) return;
       }
     }
   }
 };
 
+// Test 
 (function () {
   // Test case 1: Array iteration
   const arr = [1, 2, 3, 4, 5];
