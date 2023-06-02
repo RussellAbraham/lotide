@@ -12,7 +12,7 @@ const eqArrays = function(arr1, arr2) {
 
 const assertArraysEqual = function(arr1, arr2) {
   try {
-    if (eqArrays(arr1,arr2)) {
+    if (eqArrays(arr1, arr2)) {
       console.log(`✅ Assertion Passed: ${arr1} === ${arr2}`);
       // return `✅ Assertion Passed: ${arr1} === ${arr2}`
     } else {
@@ -27,7 +27,7 @@ const assertArraysEqual = function(arr1, arr2) {
   }
 };
 
-const letterPositions = function (sentence) {
+const letterPositions = function(sentence) {
   const positions = {}; // Initialize an empty object to store the letter positions
 
   for (let i = 0; i < sentence.length; i++) {
