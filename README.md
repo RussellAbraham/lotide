@@ -49,6 +49,13 @@ A collection of utility functions inspired by [Lodash](https://github.com/lodash
   - `arr2` (Array): The second array to compare.
 - Returns: `true` if the arrays are equal, `false` otherwise.
 
+### `letterPositions(sentence)`
+
+- Description: Returns an object that maps each letter in the input sentence to an array of its positions.
+- Parameters:
+  - `sentence` (string): The input sentence.
+- Returns: An object with letter positions.
+
 ### `map(array, callback)`
 
 - Description: Applies a callback function to each element in an array and returns an array of the results.
