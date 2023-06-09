@@ -49,6 +49,14 @@ A collection of utility functions inspired by [Lodash](https://github.com/lodash
   - `arr2` (Array): The second array to compare.
 - Returns: `true` if the arrays are equal, `false` otherwise.
 
+### `map(array, callback)`
+
+- Description: Applies a callback function to each element in an array and returns an array of the results.
+- Parameters:
+  - `array` (Array): The input array.
+  - `callback` (Function): The callback function to apply to each element.
+- Returns: An array of the results after applying the callback function to each element.
+
 ## Usage
 
 - Make sure to have Node.js installed.
