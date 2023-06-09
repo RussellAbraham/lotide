@@ -1,4 +1,13 @@
-// custom each function to handle arrays, strings, and raw objects
+/**
+ * Iterates over elements of an object or array, calling the iterator function for each element.
+ * Supports arrays, array-like strings, and generic objects.
+ *
+ * @param {Object|Array|String} obj - The object or array to iterate over.
+ * @param {Function} iterator - The iterator function to call for each element.
+ * @param {Object} [context] - The context object to use as `this` inside the iterator function.
+ * @returns {void}
+ */
+// custom each7 function to handle arrays, strings, and raw objects
 const each = function (obj, iterator, context) {
   const breaker = {}; // Object used to break out of the loop iteration
   if (obj == null) return; // If the object is null or undefined, return early
