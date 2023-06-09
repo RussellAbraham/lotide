@@ -1,0 +1,26 @@
+{
+  "name": "lotide",
+  "version": "1.0.0",
+  "description": "A collection of utility functions inspired by [Lodash](https://github.com/lodash/lodash) and [Underscore](https://github.com/jashkenas/underscore)",
+  "main": "assertArraysEqual.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RussellAbraham/lotide.git"
+  },
+  "author": "Russell Abraham",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RussellAbraham/lotide/issues"
+  },
+  "homepage": "https://github.com/RussellAbraham/lotide#readme",
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "mocha": "^9.2.2"
+  }
+}
