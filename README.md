@@ -57,6 +57,14 @@ A collection of utility functions inspired by [Lodash](https://github.com/lodash
   - `callback` (Function): The callback function to apply to each element.
 - Returns: An array of the results after applying the callback function to each element.
 
+### `without(source, itemsToRemove)`
+
+- Description: Creates a new array with all occurrences of specified items removed from the source array.
+- Parameters:
+  - `source` (Array): The source array.
+  - `itemsToRemove` (Array): The items to remove from the source array.
+- Returns: A new array with the specified items removed.
+
 ## Usage
 
 - Make sure to have Node.js installed.
