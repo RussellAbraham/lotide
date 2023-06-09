@@ -1,27 +1,13 @@
-// function included to test equality. LHL directive
-const assertEqual = function(actual, expected) {
-  try {
-    if (actual === expected) {
-      console.log(`✅ Assertion Passed: ${actual} === ${expected}`);
-    } else {
-      throw new Error(`🛑 Assertion Failed: ${actual} !== ${expected}`);
-    }
-  } catch (error) {
-    console.error(error.message);
-  } finally {
-    console.log('Assertion completed.');
-  }
-};
-
+// Function to retrieve the first element of an array
 const head = function(array) {
+  // Check if the array is empty
   if (array.length === 0) {
+    // If the array is empty, return undefined as there is no first element
     return undefined;
   }
+  // If the array is not empty, return the first element
   return array[0];
 };
-
-assertEqual(head([5,6,7]), 5);
-assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");
 
 // slightly more advanced. Handles array like objects and returns the first [n] elements of an array if specified
 const first = function(array, n, guard) {
@@ -35,9 +21,4 @@ const first = function(array, n, guard) {
   }
 };
 
-// example
-const arr = [1, 2, 3, 4, 5];
-
-console.log(first(arr));          // Output: 1
-console.log(first(arr, 3));       // Output: [1, 2, 3]
-console.log(first(arr, 3, true));
+module.exports = head;
