@@ -26,13 +26,6 @@ A collection of utility functions inspired by [Lodash](https://github.com/lodash
   - `array` (Array): The array to query.
 - Returns: The first element of the array, or `undefined` if the array is empty.
 
-### `tail(array)`
-
-- Description: Returns a new array with all elements except the first.
-- Parameters:
-  - `array` (Array): The array to query.
-- Returns: A new array containing all elements except the first, or an empty array if the input array has one or fewer elements.
-
 ### `middle(array)`
 
 - Description: Returns the middle element(s) of an array.
@@ -86,6 +79,22 @@ A collection of utility functions inspired by [Lodash](https://github.com/lodash
   - `array` (Array): The input array.
   - `callback` (Function): The callback function to apply to each element.
 - Returns: An array of the results after applying the callback function to each element.
+
+### `tail(array)`
+
+- Description: Returns a new array with all elements except the first.
+- Parameters:
+  - `array` (Array): The array to query.
+- Returns: A new array containing all elements except the first, or an empty array if the input array has one or fewer elements.
+
+### `takeUntil(array, callback)`
+
+- Description: Creates a new array with elements from the original array until the callback returns a truthy value.
+- Parameters:
+  - `array` (Array): The original array.
+  - `callback` (Function): The callback function that determines the stopping condition.
+                           It should return a truthy value to stop iterating.
+- Returns: A new array containing the elements until the stopping condition is met.
 
 ### `without(source, itemsToRemove)`
 
