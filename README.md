@@ -4,6 +4,15 @@ A collection of utility functions inspired by [Lodash](https://github.com/lodash
 
 ## Functions
 
+### `findKey(object, callback)`
+
+- Description: Searches for a key in an object based on the callback function's return value.
+- Parameters:
+  - `object` (Object): The object to search in.
+  - `callback` (Function): The callback function that is called with each value in the object.
+                           It should return a truthy value to find the corresponding key.
+- Returns: The found key, or undefined if no key is found.
+
 ### `findKeyByValue(object, value)`
 
 - Description: Finds the first key in the object whose value matches the given value.
