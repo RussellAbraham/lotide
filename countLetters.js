@@ -1,19 +1,9 @@
-// assertion test LHL directive
-const assertEqual = function(actual, expected) {
-  try {
-    if (actual === expected) {
-      console.log(`✅ Assertion Passed: ${actual} === ${expected}`);
-    } else {
-      throw new Error(`🛑 Assertion Failed: ${actual} !== ${expected}`);
-    }
-  } catch (error) {
-    console.error(error.message);
-  } finally {
-    console.log('Assertion completed.');
-  }
-};
-
-// simple solution
+/**
+ * Counts the occurrences of each letter in a string.
+ *
+ * @param {string} string - The input string to count the letters.
+ * @returns {Object} - An object with letters as keys and their respective counts as values.
+ */
 const countLetters = function(string) {
   // initialize object to return as our result
   const result = {};
@@ -33,25 +23,10 @@ const countLetters = function(string) {
   return result;
 };
 
-// test
+module.exports = countLetters;
 
-const stringToTest = "Hello World!";
-const objectToCompare = {
-  H: 1,
-  e: 1,
-  l: 3,
-  o: 2,
-  W: 1,
-  r: 1,
-  d: 1
-};
-// use JSON.stringify to serialize the result for the test to work
-//'{"H":1,"e":1,"l":3,"o":2,"W":1,"r":1,"d":1}'
-
-assertEqual(JSON.stringify(countLetters(stringToTest)), JSON.stringify(objectToCompare));
-
+/*
 // better solution with helper function
-
 // function to check if string contains alphabetic character
 const isAlpha = function(string) {
   // Get the character code of the first character in the string
@@ -64,7 +39,6 @@ const isAlpha = function(string) {
 
   return true; // Alphabetic letter
 };
-
 const countLettersOptimized = function(string) {
   // initialize object to return as our result
   const result = {};
@@ -79,5 +53,4 @@ const countLettersOptimized = function(string) {
   }
   return result;
 };
-
-assertEqual(JSON.stringify(countLettersOptimized(stringToTest)), JSON.stringify(objectToCompare));
+*/

@@ -58,6 +58,13 @@ A collection of utility functions inspired by [Lodash](https://github.com/lodash
   - `arr2` (Array): The second array to compare.
 - Returns: None.
 
+### `countLetters(string)`
+
+- Description: Counts the occurrences of each letter in a string.
+- Parameters:
+  - `string` (string): The input string to count the letters.
+- Returns: An object with letters as keys and their respective counts as values.
+
 ### `countOnly(allItems, itemsToCount)`
 
 - Description: Counts the occurrences of specific items in an array based on a provided criteria.
