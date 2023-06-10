@@ -1,7 +1,8 @@
-const assert = require('chai').assert;
+const { assert } = require('chai');
 const tail = require('../tail');
 
 describe("#tail", () => {
+
   it("returns an empty array for an empty input array", () => {
     assert.deepEqual(tail([]), []);
   });
