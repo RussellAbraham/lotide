@@ -58,6 +58,14 @@ A collection of utility functions inspired by [Lodash](https://github.com/lodash
   - `arr2` (Array): The second array to compare.
 - Returns: None.
 
+### `assertObjectsEqual(actual, expected)`
+
+- Description: Compares two objects for equality and prints an assertion message.
+- Parameters:
+  - `actual` (Object): The actual object to compare.
+  - `expected` (Object): The expected object to compare against.
+- Returns: void
+
 ### `countLetters(string)`
 
 - Description: Counts the occurrences of each letter in a string.

@@ -1,41 +1,11 @@
-
-const eqArrays = function(arr1, arr2) {
-  if (arr1.length !== arr2.length) {
-    return false;
-  }
-  for (let i = 0; i < arr1.length; i++) {
-    if (arr1[i] !== arr2[i]) {
-      return false;
-    }
-  }
-  return true;
-};
-
-// Returns true if both objects have identical keys with identical values.
-// Otherwise you get back a big fat false!
-const eqObjects = function(object1, object2) {
-  const keys1 = Object.keys(object1);
-  const keys2 = Object.keys(object2);
-  // check that both objects have the same number of properties
-  // if they are not equal we can return false
-  if (keys1.length !== keys2.length) {
-    return false;
-  }
-  // loop trhough the keys and compare the values
-  for (let key of keys1) {
-    const val1 = object1[key];
-    const val2 = object2[key];
-    if (Array.isArray(val1) && Array.isArray(val2)) {
-      if (!eqArrays(val1, val2)) {
-        return false;
-      }
-    }
-    if (object1[key] === object2[key]) {
-      return true;
-    }
-  }
-};
-
+const eqObjects = require('./eqObjects');
+/**
+ * Compares two objects for equality and prints an assertion message.
+ *
+ * @param {Object} actual - The actual object to compare.
+ * @param {Object} expected - The expected object to compare against.
+ * @returns {void}
+ */
 const assertObjectsEqual = function(actual, expected) {
   const inspect = require('util').inspect;
   try {
@@ -54,8 +24,4 @@ const assertObjectsEqual = function(actual, expected) {
   }  
 };
 
-
-const johnSmith = { name : 'John Smith', age : 123, limbs : ['left arm', 'right arm', 'left leg', 'right leg'] };
-
-assertObjectsEqual(johnSmith, johnSmith); // pass
-assertObjectsEqual(johnSmith, this); // fail
+module.exports = assertObjectsEqual;
