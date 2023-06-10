@@ -1,33 +1,9 @@
-// functions for testing flatten - LHL directive
-
-const assertEqual = function(actual, expected) {
-  try {
-    if (actual === expected) {
-      console.log(`✅ Assertion Passed: ${actual} === ${expected}`);
-    } else {
-      throw new Error(`🛑 Assertion Failed: ${actual} !== ${expected}`);
-    }
-  } catch (error) {
-    console.error(error.message);
-  } finally {
-    console.log('Assertion completed.');
-  }
-};
-
-const eqArrays = function(arr1, arr2) {
-  if (arr1.length !== arr2.length) {
-    return false;
-  }
-  for (let i = 0; i < arr1.length; i++) {
-    if (arr1[i] !== arr2[i]) {
-      return false;
-    }
-  }
-  return true;
-};
-
-// take in an array containing elements including nested arrays of elements, and return a "flattened" version of the array
-
+/**
+ * Flattens a nested array into a single-level array.
+ *
+ * @param {Array} array - The array to flatten.
+ * @returns {Array} - The flattened array.
+ */
 const flatten = function(array) {
   // initialize the array to return
   const result = [];
@@ -46,16 +22,13 @@ const flatten = function(array) {
   return result;
 };
 
-// demo
-const test = [1,2,[3,4],5,[6]];
-const runTest = flatten(test);
-assertEqual(eqArrays(runTest, [1, 2, 3, 4, 5, 6]), true);
+module.exports = flatten;
 
+/*
 // small change to the function to handle nested arrays
 const flattenRecursive = function(array) {
   // Initialize an empty array to store the flattened elements
   const result = [];
-
   for (let i = 0; i < array.length; i++) {
     if (Array.isArray(array[i])) {
       // Check if the current element is an array
@@ -71,12 +44,8 @@ const flattenRecursive = function(array) {
 
   return result; // Return the flattened result array
 };
-
-
 const nestedArray = [1, [2, [3, 4], 5], 6, [7, 8]];
 const flattenedArray = flattenRecursive(nestedArray);
-assertEqual(eqArrays(flattenedArray, [1, 2, 3, 4, 5, 6, 7, 8]), true);
-
 
 const flattenReduce = function(array) {
   return array.reduce(function(result, item) {
@@ -92,9 +61,6 @@ const flattenReduce = function(array) {
     }
   }, []); // Initialize the initial value of the result as an empty array
 };
-
-
 const nestedArray1 = [1, [2, [3, 4], 5], 6, [7, 8]];
 const flattenedArray1 = flattenReduce(nestedArray1);
-console.log(flattenedArray1);  // [1, 2, 3, 4, 5, 6, 7, 8]
-
+*/

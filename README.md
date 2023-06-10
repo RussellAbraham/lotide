@@ -4,6 +4,13 @@ A collection of utility functions inspired by [Lodash](https://github.com/lodash
 
 ## Functions
 
+### `flatten(array)`
+
+- Description: Flattens a nested array into a single-level array.
+- Parameters:
+  - `array` (Array): The array to flatten.
+- Returns: The flattened array.
+
 ### `head(array)`
 
 - Description: Returns the first element of an array.
