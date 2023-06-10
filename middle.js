@@ -1,3 +1,12 @@
+/**
+ * Returns the middle element(s) of an array.
+ *
+ * @param {Array} array - The array to query.
+ * @returns {Array} - The middle element(s) of the array. If the array has an odd length,
+ * returns a single-element array with the middle element. If the array has an even length,
+ * returns a two-element array with the two middle elements. If the array has two or fewer elements,
+ * returns an empty array.
+ */
 const middle = function(array) {
   const length = array.length;
   // If the array has 2 or less elements, return an empty array
@@ -18,6 +27,5 @@ const middle = function(array) {
     return [array[middle1], array[middle2]];
   }
 };
-
 
 module.exports = middle;
