@@ -1,5 +1,12 @@
 const eqArrays = require('./eqArrays');
-
+/**
+ * Asserts whether two arrays are equal and logs the result.
+ * Throws an error if the arrays are not equal.
+ *
+ * @param {Array} arr1 - The first array to compare.
+ * @param {Array} arr2 - The second array to compare.
+ * @returns {void}
+ */
 const assertArraysEqual = function(arr1, arr2) {
   try {
     // Check if the arrays are equal using eqArrays function
@@ -18,5 +25,6 @@ const assertArraysEqual = function(arr1, arr2) {
     console.log('Assertion Completed.');
   }
 };
+
 
 module.exports = assertArraysEqual;

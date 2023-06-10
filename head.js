@@ -1,4 +1,9 @@
-// Function to retrieve the first element of an array
+/**
+ * Retrieves the first element of an array.
+ *
+ * @param {Array} array - The input array.
+ * @returns {*} - The first element of the array, or undefined if the array is empty.
+ */
 const head = function(array) {
   // Check if the array is empty
   if (array.length === 0) {

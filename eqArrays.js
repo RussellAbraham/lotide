@@ -1,3 +1,10 @@
+/**
+ * Checks if two arrays are equal by comparing their elements.
+ *
+ * @param {Array} arr1 - The first array to compare.
+ * @param {Array} arr2 - The second array to compare.
+ * @returns {boolean} - True if the arrays are equal, false otherwise.
+ */
 const eqArrays = function(arr1, arr2) {
   // Check if the arrays have different lengths
   if (arr1.length !== arr2.length) {

@@ -1,5 +1,10 @@
-/* assertEqual function is used to compare two values and assert that they are equal. */
-
+/**
+ * Compares two values and logs a message indicating whether they are equal or not.
+ *
+ * @param {*} actual - The actual value.
+ * @param {*} expected - The expected value.
+ * @returns {void}
+ */
 const assertEqual = function(actual, expected) {
   try {
     // Check if the actual value is equal to the expected value
@@ -18,5 +23,6 @@ const assertEqual = function(actual, expected) {
     console.log('Assertion completed.');
   }
 };
+
 
 module.exports = assertEqual;
