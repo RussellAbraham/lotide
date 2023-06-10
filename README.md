@@ -41,6 +41,14 @@ A collection of utility functions inspired by [Lodash](https://github.com/lodash
   - `arr2` (Array): The second array to compare.
 - Returns: None.
 
+### `countOnly(allItems, itemsToCount)`
+
+- Description: Counts the occurrences of specific items in an array based on a provided criteria.
+- Parameters:
+  - `allItems` (Array): The array of items to be counted.
+  - `itemsToCount` (Object): The object specifying the items to count and their criteria.
+- Returns: An object containing the counts of the specified items.
+
 ### `eqArrays(arr1, arr2)`
 
 - Description: Compares two arrays for equality.

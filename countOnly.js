@@ -1,24 +1,10 @@
-// assertion test - LHL directive
-const assertEqual = function(actual, expected) {
-  try {
-    if (actual === expected) {
-      console.log(`✅ Assertion Passed: ${actual} === ${expected}`);
-    } else {
-      throw new Error(`🛑 Assertion Failed: ${actual} !== ${expected}`);
-    }
-  } catch (error) {
-    console.error(error.message);
-  } finally {
-    console.log('Assertion completed.');
-  }
-};
-
-
-// countOnly will be given an array and an object.
-// It will return an object containing counts of everything that the input object listed.
-
-// allItems: an array of strings that we need to look through
-// itemsToCount: an object specifying what to count
+/**
+ * Counts the occurrences of specific items in an array based on a provided criteria.
+ *
+ * @param {Array} allItems - The array of items to be counted.
+ * @param {Object} itemsToCount - The object specifying the items to count and their criteria.
+ * @returns {Object} - An object containing the counts of the specified items.
+ */
 const countOnly = function(allItems, itemsToCount) {
   // initialize the object to return
   const result = {};
@@ -34,23 +20,4 @@ const countOnly = function(allItems, itemsToCount) {
   return result;
 };
 
-
-// test
-const firstNames = [
-  "Karl",
-  "Salima",
-  "Agouhanna",
-  "Fang",
-  "Kavith",
-  "Jason",
-  "Salima",
-  "Fang",
-  "Joe"
-];
-
-const result1 = countOnly(firstNames, { "Jason": true, "Karima": true, "Fang": true, "Agouhanna": false });
-
-assertEqual(result1["Jason"], 1);
-assertEqual(result1["Karima"], undefined);
-assertEqual(result1["Fang"], 2);
-assertEqual(result1["Agouhanna"], undefined);
+module.exports = countOnly;

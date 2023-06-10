@@ -7,7 +7,7 @@
  * @param {Object} [context] - The context object to use as `this` inside the iterator function.
  * @returns {void}
  */
-// custom each7 function to handle arrays, strings, and raw objects
+// custom each function to handle arrays, strings, and raw objects
 const each = function (obj, iterator, context) {
   const breaker = {}; // Object used to break out of the loop iteration
   if (obj == null) return; // If the object is null or undefined, return early
