@@ -4,6 +4,14 @@ A collection of utility functions inspired by [Lodash](https://github.com/lodash
 
 ## Functions
 
+### `findKeyByValue(object, value)`
+
+- Description: Finds the first key in the object whose value matches the given value.
+- Parameters:
+  - `object` (Object): The object to search.
+  - `value` (*): The value to match.
+- Returns: The key of the matched value, or `undefined` if no match is found.
+
 ### `flatten(array)`
 
 - Description: Flattens a nested array into a single-level array.

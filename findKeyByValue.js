@@ -1,18 +1,10 @@
-// assertion test LHL directive
-const assertEqual = function(actual, expected) {
-  try {
-    if (actual === expected) {
-      console.log(`✅ Assertion Passed: ${actual} === ${expected}`);
-    } else {
-      throw new Error(`🛑 Assertion Failed: ${actual} !== ${expected}`);
-    }
-  } catch (error) {
-    console.error(error.message);
-  } finally {
-    console.log('Assertion completed.');
-  }
-};
-
+/**
+ * Finds the first key in the object whose value matches the given value.
+ *
+ * @param {Object} object - The object to search.
+ * @param {*} value - The value to match.
+ * @returns {string|undefined} - The key of the matched value, or undefined if no match is found.
+ */
 const findKeyByValue = function(object, value) {
   // loop over the objects keys
   for (let key in object) {
@@ -24,14 +16,4 @@ const findKeyByValue = function(object, value) {
   }
 };
 
-// test
-const bestTVShowsByGenre = {
-  sciFi: "The Expanse",
-  comedy: "Brooklyn Nine-Nine",
-  drama: "The Wire"
-};
-
-console.log(findKeyByValue(bestTVShowsByGenre, 'The Wire'));
-
-assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
-assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);
+module.exports = findKeyByValue;
