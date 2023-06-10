@@ -4,6 +4,70 @@ A collection of utility functions inspired by [Lodash](https://github.com/lodash
 
 ## Functions
 
+### `assertArraysEqual(arr1, arr2)`
+
+- Description: Compares two arrays and logs a message indicating whether they are equal or not.
+- Parameters:
+  - `arr1` (Array): The first array to compare.
+  - `arr2` (Array): The second array to compare.
+- Returns: None.
+
+### `assertEqual(actual, expected)`
+
+- Description: Compares two values and logs a message indicating whether they are equal or not.
+- Parameters:
+  - `actual` (any): The actual value.
+  - `expected` (any): The expected value.
+- Returns: None.
+
+### `assertObjectsEqual(actual, expected)`
+
+- Description: Compares two objects for equality and prints an assertion message.
+- Parameters:
+  - `actual` (Object): The actual object to compare.
+  - `expected` (Object): The expected object to compare against.
+- Returns: void
+
+### `countLetters(string)`
+
+- Description: Counts the occurrences of each letter in a string.
+- Parameters:
+  - `string` (string): The input string to count the letters.
+- Returns: An object with letters as keys and their respective counts as values.
+
+### `countOnly(allItems, itemsToCount)`
+
+- Description: Counts the occurrences of specific items in an array based on a provided criteria.
+- Parameters:
+  - `allItems` (Array): The array of items to be counted.
+  - `itemsToCount` (Object): The object specifying the items to count and their criteria.
+- Returns: An object containing the counts of the specified items.
+
+### `each(obj, iterator, context)`
+
+- Description: Iterates over elements of an object or array, calling the iterator function for each element. Supports arrays, array-like strings, and generic objects.
+- Parameters:
+  - `obj` (Object|Array|String): The object or array to iterate over.
+  - `iterator` (Function): The iterator function to call for each element.
+  - `context` (Object) (optional): The context object to use as `this` inside the iterator function.
+- Returns: void
+
+### `eqArrays(arr1, arr2)`
+
+- Description: Compares two arrays for equality.
+- Parameters:
+  - `arr1` (Array): The first array to compare.
+  - `arr2` (Array): The second array to compare.
+- Returns: `true` if the arrays are equal, `false` otherwise.
+
+### `eqObjects(object1, object2)`
+
+- Description: Checks if two objects have identical keys with identical values.
+- Parameters:
+  - `object1` (Object): The first object to compare.
+  - `object2` (Object): The second object to compare.
+- Returns: Returns true if both objects have identical keys with identical values, otherwise false.
+
 ### `findKey(object, callback)`
 
 - Description: Searches for a key in an object based on the callback function's return value.
@@ -35,68 +99,6 @@ A collection of utility functions inspired by [Lodash](https://github.com/lodash
   - `array` (Array): The array to query.
 - Returns: The first element of the array, or `undefined` if the array is empty.
 
-### `middle(array)`
-
-- Description: Returns the middle element(s) of an array.
-- Parameters:
-  - `array` (Array): The array to query.
-- Returns: The middle element(s) of the array. If the array has an odd length, returns a single-element array with the middle element. If the array has an even length, returns a two-element array with the two middle elements. If the array has two or fewer elements, returns an empty array.
-
-### `assertEqual(actual, expected)`
-
-- Description: Compares two values and logs a message indicating whether they are equal or not.
-- Parameters:
-  - `actual` (any): The actual value.
-  - `expected` (any): The expected value.
-- Returns: None.
-
-### `assertArraysEqual(arr1, arr2)`
-
-- Description: Compares two arrays and logs a message indicating whether they are equal or not.
-- Parameters:
-  - `arr1` (Array): The first array to compare.
-  - `arr2` (Array): The second array to compare.
-- Returns: None.
-
-### `assertObjectsEqual(actual, expected)`
-
-- Description: Compares two objects for equality and prints an assertion message.
-- Parameters:
-  - `actual` (Object): The actual object to compare.
-  - `expected` (Object): The expected object to compare against.
-- Returns: void
-
-### `countLetters(string)`
-
-- Description: Counts the occurrences of each letter in a string.
-- Parameters:
-  - `string` (string): The input string to count the letters.
-- Returns: An object with letters as keys and their respective counts as values.
-
-### `countOnly(allItems, itemsToCount)`
-
-- Description: Counts the occurrences of specific items in an array based on a provided criteria.
-- Parameters:
-  - `allItems` (Array): The array of items to be counted.
-  - `itemsToCount` (Object): The object specifying the items to count and their criteria.
-- Returns: An object containing the counts of the specified items.
-
-### `eqArrays(arr1, arr2)`
-
-- Description: Compares two arrays for equality.
-- Parameters:
-  - `arr1` (Array): The first array to compare.
-  - `arr2` (Array): The second array to compare.
-- Returns: `true` if the arrays are equal, `false` otherwise.
-
-### `eqObjects(object1, object2)`
-
-- Description: Checks if two objects have identical keys with identical values.
-- Parameters:
-  - `object1` (Object): The first object to compare.
-  - `object2` (Object): The second object to compare.
-- Returns: Returns true if both objects have identical keys with identical values, otherwise false.
-
 ### `letterPositions(sentence)`
 
 - Description: Returns an object that maps each letter in the input sentence to an array of its positions.
@@ -111,6 +113,13 @@ A collection of utility functions inspired by [Lodash](https://github.com/lodash
   - `array` (Array): The input array.
   - `callback` (Function): The callback function to apply to each element.
 - Returns: An array of the results after applying the callback function to each element.
+
+### `middle(array)`
+
+- Description: Returns the middle element(s) of an array.
+- Parameters:
+  - `array` (Array): The array to query.
+- Returns: The middle element(s) of the array. If the array has an odd length, returns a single-element array with the middle element. If the array has an even length, returns a two-element array with the two middle elements. If the array has two or fewer elements, returns an empty array.
 
 ### `tail(array)`
 
