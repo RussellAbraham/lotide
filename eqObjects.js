@@ -1,32 +1,13 @@
-// assertion test LHL directive
-const assertEqual = function(actual, expected) {
-  try {
-    if (actual === expected) {
-      console.log(`✅ Assertion Passed: ${actual} === ${expected}`);
-    } else {
-      throw new Error(`🛑 Assertion Failed: ${actual} !== ${expected}`);
-    }
-  } catch (error) {
-    console.error(error.message);
-  } finally {
-    console.log('Assertion completed.');
-  }
-};
-
-const eqArrays = function(arr1, arr2) {
-  if (arr1.length !== arr2.length) {
-    return false;
-  }
-  for (let i = 0; i < arr1.length; i++) {
-    if (arr1[i] !== arr2[i]) {
-      return false;
-    }
-  }
-  return true;
-};
-
+const eqArrays = require('./eqArrays');
+/**
+ * Checks if two objects have identical keys with identical values.
+ *
+ * @param {Object} object1 - The first object to compare.
+ * @param {Object} object2 - The second object to compare.
+ * @returns {boolean} - Returns true if both objects have identical keys with identical values, otherwise false.
+ */
 // Returns true if both objects have identical keys with identical values.
-// Otherwise you get back a big fat false!
+// Otherwise you get false!
 const eqObjects = function(object1, object2) {
   const keys1 = Object.keys(object1);
   const keys2 = Object.keys(object2);
@@ -48,20 +29,6 @@ const eqObjects = function(object1, object2) {
       return true;
     }
   }
-
 };
 
-// test data
-const shirtObject = { color: "red", size: "medium" };
-const anotherShirtObject = { size: "medium", color: "red" };
-const longSleeveShirtObject = { size: "medium", color: "red", sleeveLength: "long" };
-
-const multiColorShirtObject = { colors: ["red", "blue"], size: "medium" };
-const anotherMultiColorShirtObject = { size: "medium", colors: ["red", "blue"] };
-const longSleeveMultiColorShirtObject = { size: "medium", colors: ["red", "blue"], sleeveLength: "long" };
-
-// assertion test
-assertEqual(eqObjects(shirtObject, anotherShirtObject), true);
-assertEqual(eqObjects(shirtObject, longSleeveShirtObject), false);
-assertEqual(eqObjects(multiColorShirtObject, anotherMultiColorShirtObject), true); // => true
-assertEqual(eqObjects(multiColorShirtObject, longSleeveMultiColorShirtObject), false); // => false
+module.exports = eqObjects;

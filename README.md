@@ -74,6 +74,14 @@ A collection of utility functions inspired by [Lodash](https://github.com/lodash
   - `arr2` (Array): The second array to compare.
 - Returns: `true` if the arrays are equal, `false` otherwise.
 
+### `eqObjects(object1, object2)`
+
+- Description: Checks if two objects have identical keys with identical values.
+- Parameters:
+  - `object1` (Object): The first object to compare.
+  - `object2` (Object): The second object to compare.
+- Returns: Returns true if both objects have identical keys with identical values, otherwise false.
+
 ### `letterPositions(sentence)`
 
 - Description: Returns an object that maps each letter in the input sentence to an array of its positions.
