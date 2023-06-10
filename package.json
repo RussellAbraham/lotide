@@ -1,8 +1,8 @@
 {
-  "name": "lotide",
+  "name": "@russell-abraham/lotide",
   "version": "1.0.0",
-  "description": "A collection of utility functions inspired by [Lodash](https://github.com/lodash/lodash) and [Underscore](https://github.com/jashkenas/underscore)",
-  "main": "",
+  "description": "A collection of utility functions inspired by Lodash and Underscore",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },
